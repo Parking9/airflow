@@ -4,7 +4,7 @@ from airflow.providers.standard.operators.bash import BashOperator
 from airflow.sdk import DAG, chain
 
 with DAG(
-    dag_id="example_complex",
+    dag_id="dags_bash_operator",
     schedule=None, #"0 0 0 0 0" 분 시 일 월 요일
     start_date=pendulum.datetime(2021, 1, 1, tz="Asia/Seoul"), # UTC표준시간, 한국보다 9시간 늦음
     catchup=False, # 과저 날짜 소급해버림...
